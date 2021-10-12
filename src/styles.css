@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Comic";
+  src: local("Comic"), url(assets/fonts/BADABB__.TTF) format("truetype");
+}
+
+html, body {
+  height: 100%;
+  background-image: url('assets/images/background.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

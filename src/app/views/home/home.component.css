@@ -1,0 +1,49 @@
+#image {
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0)), url('../../../assets/images/superhero.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 50vw;
+  height: 20vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-img {
+  height: 30vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-find {
+  font-family: "Comic", Arial, Helvetica, sans-serif;
+  width: 40vw;
+  height: 4vw;
+  border: 5px solid #FFE138;
+  border-radius: 20px;
+  padding: 0 50px;
+  font-size: 25px;
+}
+
+.input-find:hover{
+  border-color: #BA2025;
+  cursor: pointer;
+}
+
+.title {
+  font-family: "Comic", Arial, Helvetica, sans-serif;
+  font-size: 12vw;
+  text-shadow: 2px 0 0 #fff;
+}
+
+input:focus {
+  outline: none;
+}
