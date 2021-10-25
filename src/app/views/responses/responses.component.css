@@ -1,0 +1,22 @@
+.bckwhite {
+  background-color: white;
+  margin-top: 25px;
+}
+
+.results {
+  padding-top: 25px;
+}
+
+.img-results {
+  width: 5vw;
+  height: 8vw;
+}
+
+.clickable-text {
+  color: rgba(0, 0, 255, 1);
+}
+
+.clickable-text:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}

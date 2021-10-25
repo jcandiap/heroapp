@@ -1,0 +1,17 @@
+<app-finder [childToMaster]="data" (childToParent)="childToParent($event)">
+</app-finder>
+
+<div class="container bckwhite">
+  <div *ngFor="let item of data?.results" class="results">
+    <div class="row">
+      <div class="col-1">
+        <img src="{{ item?.image?.url }}" alt="{{ item?.name }} Image" class="img-results">
+      </div>
+      <div class="col-11">
+        <h1 class="clickable-text" (click)="openProfile(item?.id)">{{ item?.name }} - {{ item?.biography["full-name"] }}</h1>
+        <h3 *ngIf="item?.work?.occupation != '-'">{{ item?.work?.occupation }}</h3>
+        <h3 *ngIf="item?.work?.base != '-'">{{ item?.work?.base }}</h3>
+      </div>
+    </div>
+  </div>
+</div>

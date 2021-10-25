@@ -3,6 +3,7 @@ import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { HeroService } from 'src/app/services/hero.service';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -17,9 +18,10 @@ export class HomeComponent implements OnInit {
   filteredOptions: Observable<string[]> | undefined;
 
   finder:string = "";
-  heroInfo = {};
+  serviceResponse:any = {};
 
-  constructor(private heroService: HeroService) { }
+  constructor(private heroService: HeroService,
+              private router:Router) { }
 
   ngOnInit() {
     this.filteredOptions = this.myControl.valueChanges.pipe(
@@ -34,12 +36,18 @@ export class HomeComponent implements OnInit {
     return this.options.filter(option => option.toLowerCase().includes(filterValue));
   }
 
-  prueba(){
+  find(){
     this.heroService.getHeros(this.finder).subscribe(resp => {
-      this.heroInfo = resp;
+      this.serviceResponse = resp;
     }, err => console.error(err)
     , () => {
-      console.log(this.heroInfo);
+      if(this.serviceResponse?.response === "success"){
+        this.router.navigate(['responses'], {
+          state:{
+            data: this.serviceResponse
+          }
+        });
+      }
     });
   }
 }

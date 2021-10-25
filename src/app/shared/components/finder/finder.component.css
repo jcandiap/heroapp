@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.logo {
+  width: 25%;
+}
+
+.input-find {
+  font-family: "Comic", Arial, Helvetica, sans-serif;
+  width: 70%;
+  height: 4vw;
+  border: 5px solid #FFE138;
+  border-radius: 20px;
+  padding: 0 50px;
+  font-size: 25px;
+  margin-left: 25px;
+}
+
+.input-find:hover{
+  border-color: #BA2025;
+  cursor: pointer;
+}
+
+.space{
+  margin: 1vw 1vw 1vw 1vw;
+}

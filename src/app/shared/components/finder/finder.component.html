@@ -1,10 +1,6 @@
-<div class="container-img">
-  <div id="image">
-    <p class="title">Hero App</p>
-  </div>
-</div>
-<div class="container">
+<div class="justify-content-between space">
   <form (ngSubmit)="find()">
+    <img class="logo" src="assets/images/logo.png" alt="logo">
     <input
       [(ngModel)]="finder"
       class="input-find"
@@ -13,6 +9,5 @@
       id="find"
       placeholder="Enter the hero name"
       alt="Enter the hero name">
-      <!-- <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon> -->
   </form>
 </div>

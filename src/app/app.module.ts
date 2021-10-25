@@ -11,14 +11,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { routerConfig } from './app.routing';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { ResponsesComponent } from './views/responses/responses.component';
+import { ComponentModule } from './shared/components/components.module';
+import { ProfileComponent } from './views/profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ResponsesComponent,
+    ProfileComponent
   ],
   imports: [
     RouterModule.forRoot(routerConfig, { useHash: true }),
+    ComponentModule,
     BrowserModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
